@@ -14,3 +14,5 @@ for lines in content_line:
     print("L'hostname del device è: ", hostname)
     print("Il sistema operativo del device è: ", os)
     print("\n\n")
+
+# TEST SYNC
