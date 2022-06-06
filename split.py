@@ -1,10 +1,8 @@
-from tabulate import tabulate
-
 file = open("devices.txt", "r")
 content = file.read()
 content_line = content.splitlines()
 file.close()
-print("Questo è l'array di partenza")
+print("Questa è la lista di partenza")
 print(content_line)
 print("\n")
 for lines in content_line:

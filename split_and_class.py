@@ -13,12 +13,13 @@ class Device:
                f'Device OS Version        :{self.os_version}'
         return desc
 
-test = open("devices.txt", "r")
-test_temp = test.readlines()
-print(test_temp)
+file = open("devices.txt", "r")
+devices = file.read()
+content_line = devices.splitlines()
+print(content_line)
 switches_list = []
 n = 0
-for switches in test_temp:
+for switches in content_line:
     switches_temp_list1 = switches.split("\n")
     switches_list.append(switches_temp_list1[0])
     #print(switches_list)
@@ -30,4 +31,4 @@ for switches in test_temp:
     switch = Device(ip, hostname, ios)
     n = n + 1
     print("Switch #", n, "\n" + switch.getdesc() + "\n")
-test.close()
+file.close()
